@@ -67,6 +67,10 @@
         可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，使用下面的命令：
         $ git stash apply stash@{0}
     
+        $ git remote -v 查看远程库信息
+        $ git push origin branchname 推送本地分支到远程仓库
+        推送失败，先用git pull抓取新提交
+        $ git checkout -b branchname origin/branchname  在本地创建和远程分支对应的分支
 
         /***** 多人协作 *****/
         并不是一定要把本地分支推送到远程，哪些分支需要推送，哪些不需要呢？
@@ -74,6 +78,16 @@
             2、dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
             3、bug分支只用于本地修复bug，没有必要推送到远程；
             4、feature分支是否推送，取决于跟小伙伴是否有合作
+
+
+        /***** 多人习作模式 ******/
+        多人协作的工作模式通常是这样：
+            首先，可以试图用git push origin[branch-name]推送自己的修改；
+            如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+            如果合并有冲突，则解决冲突，并在本地提交；
+            没有冲突或者解决掉冲突后，再用git push origin [branch-name]推送就能成功！
+            如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to [branch-name] origin/[branch-name]。
+        这就是多人协作的工作模式
     </pre>
     <p>这里为了演示版本回退</p>
     <p>这里为了演示修改未进行add之后commit不会提交。<span>注意：如果不用git add提交到暂存区，那就不会加入到commit中</span></p>
