@@ -64,6 +64,9 @@
         $ git stash drop 删除stash内容
 
         $ git stash pop 恢复同时删除stash内容，相当以上两个命令
+        可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，使用下面的命令：
+        $ git stash apply stash@{0}
+    
     </pre>
     <p>这里为了演示版本回退</p>
     <p>这里为了演示修改未进行add之后commit不会提交。<span>注意：如果不用git add提交到暂存区，那就不会加入到commit中</span></p>
