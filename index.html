@@ -12,9 +12,10 @@
     <p>这个文本是为了练习使用git建立的</p>
     <pre>
         git部分命令介绍：
+        /***** 初始化本地仓库 *****/
         $ git init 初始化本地仓库
 
-        往git版本库中添加文件两个步骤：
+        /***** 往git版本库中添加文件 *****/
         $ git add [filename] 添加一个文件到暂存区
         $ git commit -m 'message' 提交代码到本地仓库当前分支，'message'为本次提交版本描述，最好描述简单明了，便于他人阅读
 
@@ -22,10 +23,13 @@
 
         $ git status 查看状态
         $ git diff 查看不同
+
+        /***** 回退版本 *****/
         $ git reset --[hard/soft/]
         $ git log 查看提交历史
         $ git reflog 查看所有命令历史
 
+        /***** 撤回修改 *****/
         $ git checkout -- [filename] 撤回工作区的所有修改（未add前）
         $ git reset HEAD [filename] 可以把暂存区的修改撤销掉（unstage），重新放回工作区（在commit之前）
     </pre>
