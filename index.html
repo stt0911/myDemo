@@ -13,11 +13,18 @@
     <pre>
         git部分命令介绍：
         $ git init 初始化本地仓库
-        $ git add [filename] 添加一个文件
-        $ git add . 添加目录下的所有文件
+
+        往git版本库中添加文件两个步骤：
+        $ git add [filename] 添加一个文件到暂存区
+        $ git commit -m 'message' 提交代码到本地仓库当前分支，'message'为本次提交版本描述，最好描述简单明了，便于他人阅读
+        
+        $ git add . 添加目录下的所有文件到暂存区
+
         $ git status 查看状态
         $ git diff 查看不同
-        $ git commit -m 'message' 提交代码到本地仓库，'message'为本次提交版本描述，最好描述简单明了，便于他人阅读
+        $ git reset --[hard/soft/]
+        $ git log 查看提交历史
+        $ git reflog 查看所有命令历史
     </pre>
     <p>这里为了演示版本回退</p>
 </body>
