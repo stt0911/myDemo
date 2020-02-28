@@ -25,6 +25,9 @@
         $ git reset --[hard/soft/]
         $ git log 查看提交历史
         $ git reflog 查看所有命令历史
+
+        $ git checkout -- [filename] 撤回工作区的所有修改（未add前）
+        $ git reset HEAD [filename] 可以把暂存区的修改撤销掉（unstage），重新放回工作区（在commit之前）
     </pre>
     <p>这里为了演示版本回退</p>
     <p>这里为了演示修改未进行add之后commit不会提交。<span>注意：如果不用git add提交到暂存区，那就不会加入到commit中</span></p>
