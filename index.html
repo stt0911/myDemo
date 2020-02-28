@@ -55,6 +55,15 @@
         合并分支时，git默认使用Fast forward模式，这种模式删除分支后，会丢掉分支信息。
         如果强制禁用Fast forward模式， git会在merge时生成一个新的commit，这样从分支历史上就可以看到分支信息。
         $ git merge --no-ff -m "merge with no-ff" [branchname]
+    
+        /***** Bug分支 *****/
+        $ git stash 把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+        $ git stash list 获取stash内容
+        <!-- 以下两个方法结合使用 -->
+        $ git stash apply 恢复隐藏的工作现场
+        $ git stash drop 删除stash内容
+
+        $ git stash pop 恢复同时删除stash内容，相当以上两个命令
     </pre>
     <p>这里为了演示版本回退</p>
     <p>这里为了演示修改未进行add之后commit不会提交。<span>注意：如果不用git add提交到暂存区，那就不会加入到commit中</span></p>
